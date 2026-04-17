@@ -54,14 +54,14 @@ P_i = \frac{d_i}{D}
 - **Randomness Provider** — источник случайности (mock)
 - **ERC721 NFT** — фиксирует результат розыгрыша
 
-### Важно
+## PS
 
 - Лотерея **не vault**
 - использует внешний vault для получения дохода
 
 ---
 
-## Жизненный цикл (Epoch)
+## Жизненный цикл - эпоха (Epoch)
 
 Каждый раунд лотереи называется **epoch**.
 
@@ -112,7 +112,7 @@ uint256 prize = assets - epoch.totalPrincipal;
 * вычисляется доход
 * назначается победитель
 
-Случайность
+## Случайность
 
 В текущей реализации:
 
@@ -123,7 +123,7 @@ uint256 prize = assets - epoch.totalPrincipal;
 
 ⸻
 
-Используемые стандарты
+## Используемые стандарты
 
 * ERC20 — работа с токенами
 * ERC4626 — стандарт vault
@@ -147,7 +147,7 @@ forge script script/DeploySepolia.s.sol:DeploySepolia \
   --private-key $PRIVATE_KEY \
   --broadcast
 
-Тестирование
+## Тестирование
 
 Реализованы тесты:
 
@@ -164,7 +164,7 @@ forge script script/DeploySepolia.s.sol:DeploySepolia \
 
 ⸻
 
-Основные решения
+## Основные решения
 
 * использование ERC4626 для абстракции доходности
 * вероятностная модель с весами
@@ -173,7 +173,7 @@ forge script script/DeploySepolia.s.sol:DeploySepolia \
 
 ⸻
 
-Ограничения
+## Ограничения
 
 * mock случайность (небезопасно)
 * mock доходность
@@ -181,7 +181,7 @@ forge script script/DeploySepolia.s.sol:DeploySepolia \
 
 ⸻
 
-Возможные улучшения
+## Возможные улучшения
 
 * интеграция Chainlink VRF
 * подключение реальных протоколов (Aave)
@@ -189,7 +189,7 @@ forge script script/DeploySepolia.s.sol:DeploySepolia \
 
 ⸻
 
-Заключение
+## Заключение
 
 В проекте реализован полноценный DeFi-протокол, который демонстрирует:
 
